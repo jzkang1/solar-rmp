@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "RateMyJS",
+  "version": "1.0.0",
+  "description": "Shows RateMyProfessor Reviews and Scores",
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+  "action": {
+    "default_icon": "icon16.png",
+    "default_popup": "extension.html"
+  },
+  "permissions": ["storage", "scripting", "tabs", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js", "jquery-3.6.0.min.js"]
+    }
+  ]
+}
